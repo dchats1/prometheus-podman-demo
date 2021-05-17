@@ -8,20 +8,9 @@ Note: If you are using docker instead of podman, simply replace `podman` with `d
 podman run -d --net host --name node quay.io/prometheus/node-exporter
 ```
 
-2. Save the following to a file called prometheus.yml
+2. Copy this Prometheus configuration file:
 ```
-global:
-  scrape_interval:     15s
-  evaluation_interval: 15s
-
-scrape_configs:
-  - job_name: 'prometheus'
-    static_configs:
-    - targets: ['localhost:9090']
-
-  - job_name: 'node'
-    static_configs:
-    - targets: ['localhost:9100']
+curl -LO https://raw.githubusercontent.com/dchats1/prometheus-podman-demo/main/prometheus.yml
 ```
 
 3. Run the Prometheus container, and mount the newly created Prometheus configuration:
