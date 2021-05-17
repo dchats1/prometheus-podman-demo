@@ -58,8 +58,7 @@ https://grafana.com/grafana/dashboards/13978?pg=dashboards&plcmt=featured-sub1
 10. Cleanup:
 ```
 # Stop and Remove the running containers:
-podman stop prometheus-demo-node-exporter prometheus-demo-prometheus prometheus-demo-grafana
-podman rm prometheus-demo-node-exporter prometheus-demo-prometheus prometheus-demo-grafana
+podman rm -f prometheus-demo-node-exporter prometheus-demo-prometheus prometheus-demo-grafana
 
 # Clean up images:
 podman rmi node-exporter prometheus grafana
