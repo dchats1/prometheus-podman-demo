@@ -30,6 +30,8 @@ podman run -d --net host --name prometheus -v ./prometheus.yml:/etc/prometheus/p
 4. In your browser, navigate to http://localhost:9090/
 Under the Status > Targets page you should be able to see the node and prometheus job.
 
+![Prometheus Targets Page](screenshots/prometheus-targets.png "Prometheus Targets Page")
+
 5. Run Grafana:
 ```
 podman run -d --net host --name grafana grafana/grafana
