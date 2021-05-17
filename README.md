@@ -1,6 +1,8 @@
 # prometheus-podman-demo
 
 
+Note: If you are using docker instead of podman, simply replace `podman` with `docker` when running the containers. All the steps should be the same.  
+
 1. Run the node-exporter container (https://github.com/prometheus/node_exporter)
 ```
 podman run -d --net host --name node quay.io/prometheus/node-exporter
@@ -52,4 +54,11 @@ Next, scroll to the bottom and click 'Save & Test'. If Grafana can reach the Pro
 ![Data Sources](screenshots/grafana-set-url.png "Data Sources")
 ![Data Sources](screenshots/grafana-save-and-test.png "Data Sources")
 
-Import node-exporter dashboard: 13978
+Now, import the 'Node Exporter Quickstart and Dashboard' prebuilt dashboard (ID: 13978)  
+https://grafana.com/grafana/dashboards/13978?pg=dashboards&plcmt=featured-sub1  
+
+![Import](screenshots/grafana-import-1.png "Import")
+![Import](screenshots/grafana-import-2.png "Import")
+![Import](screenshots/grafana-import-3.png "Import")
+
+![Dashboard](screenshots/grafana-dashboard.png "Dashboard")
