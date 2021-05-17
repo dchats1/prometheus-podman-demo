@@ -42,4 +42,14 @@ podman run -d --net host --name grafana grafana/grafana
 To add a new target navigate to the data sources page under 'Configuration' > 'Data Sources':
 ![Data Sources](screenshots/grafana-datasource.png "Data Sources")
 
+On the Data Sources page, click on 'Add data source'. By default there will be a list of available datasources. The first option will be 'Prometheus. Select the Prometheus data source.
+
+![Data Sources](screenshots/grafana-select-prometheus.png "Data Sources")
+
+Under the HTTP section, add the URL of the Prometheus container. In this case it will be http://localhost:9090  
+Next, scroll to the bottom and click 'Save & Test'. If Grafana can reach the Prometheus server it will reply with 'Data source is working'.
+
+![Data Sources](screenshots/grafana-set-url.png "Data Sources")
+![Data Sources](screenshots/grafana-save-and-test.png "Data Sources")
+
 Import node-exporter dashboard: 13978
