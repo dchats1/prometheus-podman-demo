@@ -40,6 +40,6 @@ podman run -d --net host --name grafana grafana/grafana
 6. Once Grafana has started, navigate to http://localhost:3000/ in your browser. The default login will be admin/admin  
   
 To add a new target navigate to the data sources page under 'Configuration' > 'Data Sources':
-![Data Sources](screenshots/grafana-datasources.png "Data Sources")
+![Data Sources](screenshots/grafana-datasource.png "Data Sources")
 
 Import node-exporter dashboard: 13978
