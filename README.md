@@ -22,7 +22,7 @@ podman run -d --net host --name prometheus-demo-prometheus -v ./prometheus.yml:/
 ```
 
 3. In your browser, navigate to http://localhost:9090/  
-If you navigate to the 'Statu's menu, and select 'Targets' page you should be able to see the node and prometheus job. If everything is working correctly both with show a state of 'UP'. They may take a minute to run the intial scrape. Reload the page if the State shows 'Unknown'.
+If you navigate to the 'Status' menu, and select 'Targets' page you should be able to see the node and prometheus job. If everything is working correctly both with show a state of 'UP'. They may take a minute to run the intial scrape. Reload the page if the State shows 'Unknown'.
 
 ![Prometheus Targets Page](screenshots/prometheus-targets.png "Prometheus Targets Page")
 
@@ -49,10 +49,16 @@ Next, scroll to the bottom and click 'Save & Test'. If Grafana can reach the Pro
 9. Now, import the 'Node Exporter Quickstart and Dashboard' prebuilt dashboard (ID: 13978)  
 https://grafana.com/grafana/dashboards/13978?pg=dashboards&plcmt=featured-sub1  
 
+Start by Navigating to 'Create' > 'Import':
 ![Import](screenshots/grafana-import-1.png "Import")
+
+Then, enter the Dashboard ID into the 'Import via grafana.com' field:
 ![Import](screenshots/grafana-import-2.png "Import")
+
+Lastly, you have the option to change the name or folder, then Import the dashboard.
 ![Import](screenshots/grafana-import-3.png "Import")
 
+Once imported, you will be brought to the newly imported dashboard page. Here you should start seeing your metrics:
 ![Dashboard](screenshots/grafana-dashboard.png "Dashboard")
 
 10. Cleanup:
