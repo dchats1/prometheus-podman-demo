@@ -3,6 +3,9 @@
 
 Note: If you are using docker instead of podman, simply replace `podman` with `docker` when running the containers. All the steps should be the same.  
 
+I've created a video demo that covers the content in this written demo:
+https://youtu.be/Ey4Ig4mrpeI
+
 Prereqs:
 - Running either podman or docker.
 - Clone this repo:
